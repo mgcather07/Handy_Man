@@ -63,6 +63,17 @@ To use real client photos instead, drop them in `assets/` and set a
 - **About:** set `.about-img-1 { background: url("../assets/about.jpg") center/cover; }` and remove the `.about-art` SVG
 - **Gallery:** set `background: url("../assets/kitchen.jpg") center/cover;` on `.g1`–`.g6`
 
+## Demo banner
+
+A slim bar at the very top marks this as a **demo with sample content** and
+carries a "Want a site like this?" call-to-action. It's dismissible (hidden for
+the rest of the browser session once closed). To repurpose it:
+
+- **CTA link:** edit the `mailto:` in `.demo-banner` (in `index.html`) to point
+  at your real studio email or website.
+- **Remove it entirely:** delete the `<div class="demo-banner">…</div>` block
+  in `index.html` when the site goes live for a real client.
+
 ## Note on the form
 
 The quote form is front-end only (validates and shows a confirmation). To

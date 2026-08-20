@@ -4,6 +4,21 @@
 (function () {
   "use strict";
 
+  /* ---------- Demo banner dismiss ---------- */
+  var demoBanner = document.getElementById("demoBanner");
+  var demoClose = document.getElementById("demoBannerClose");
+  try {
+    if (demoBanner && sessionStorage.getItem("demoBannerDismissed") === "1") {
+      demoBanner.classList.add("is-hidden");
+    }
+  } catch (e) { /* sessionStorage unavailable — leave banner shown */ }
+  if (demoClose && demoBanner) {
+    demoClose.addEventListener("click", function () {
+      demoBanner.classList.add("is-hidden");
+      try { sessionStorage.setItem("demoBannerDismissed", "1"); } catch (e) {}
+    });
+  }
+
   /* ---------- Mobile nav toggle ---------- */
   var toggle = document.getElementById("navToggle");
   var mobileNav = document.getElementById("mobileNav");

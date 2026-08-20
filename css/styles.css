@@ -94,6 +94,41 @@ h1, h2, h3, h4 {
 .btn-block { display: flex; width: 100%; }
 
 /* ============================================================
+   DEMO BANNER
+   ============================================================ */
+.demo-banner {
+  background: linear-gradient(90deg, #0e1c33, #16294a);
+  color: rgba(255,255,255,.82);
+  border-bottom: 1px solid rgba(246,161,39,.28);
+  font-size: 0.82rem;
+}
+.demo-banner.is-hidden { display: none; }
+.demo-banner-inner { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 40px; padding-top: 7px; padding-bottom: 7px; flex-wrap: wrap; position: relative; }
+.demo-banner-text { display: inline-flex; align-items: center; gap: 9px; }
+.demo-tag {
+  font-family: var(--ff-body); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #241500; background: var(--amber); padding: 3px 8px; border-radius: 5px;
+}
+.demo-banner-cta {
+  display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--amber);
+  padding-bottom: 1px; border-bottom: 1px solid transparent; transition: border-color .2s, color .2s;
+}
+.demo-banner-cta:hover { color: #ffc266; border-color: currentColor; }
+.demo-banner-cta svg { transition: transform .2s ease; }
+.demo-banner-cta:hover svg { transform: translateX(3px); }
+.demo-banner-close {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; color: rgba(255,255,255,.5); font-size: 1.35rem; line-height: 1;
+  cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: color .2s, background .2s;
+}
+.demo-banner-close:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+@media (max-width: 560px) {
+  .demo-banner { font-size: 0.76rem; }
+  .demo-banner-inner { gap: 8px 14px; padding-right: 34px; }
+}
+
+/* ============================================================
    HEADER
    ============================================================ */
 .site-header {
